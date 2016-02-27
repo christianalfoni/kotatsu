@@ -10,12 +10,12 @@ module.exports = function(output, cwd) {
   if (!output)
     return {
       path: path.join(cwd, '.kotatsu'),
-      filename: '[name].js'
+      filename: 'bundle.js'
     };
 
   var ext = path.extname(output),
       directory = output,
-      filename = '[name].js';
+      filename = 'bundle.js';
 
   if (ext) {
     filename = path.basename(output);
