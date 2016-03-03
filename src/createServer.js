@@ -88,6 +88,7 @@ module.exports = function createServer(compiler, opts) {
 
       app.use(proxy(namespace, {
         target: target,
+        ws: true,
         pathRewrite: pathRewrite,
         logLevel: 'silent',
         onProxyRes: copyHeadersToResponse,
